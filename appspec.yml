@@ -1,11 +1,11 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /var/www/html  # Destination folder where Nginx serves files
+  - source: /scripts
+    destination: /opt/codedeploy-agent/deployment-root/$DEPLOYMENT_ID/deployment-archive/scripts
+
 hooks:
   AfterInstall:
     - location: scripts/restart_nginx.sh
       timeout: 300
       runas: root
-
