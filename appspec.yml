@@ -1,9 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /script
-    destination: /opt/codedeploy-agent/deployment-root/$DEPLOYMENT_ID/deployment-archive/script
-
+  - source: /
+    destination: /var/www/html
 hooks:
   AfterInstall:
     - location: script/restart_nginx.sh
