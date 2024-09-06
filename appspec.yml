@@ -2,10 +2,10 @@ version: 0.0
 os: linux
 files:
   - source: /script
-    destination: /opt/codedeploy-agent/deployment-root/$DEPLOYMENT_ID/deployment-archive/scripts
+    destination: /opt/codedeploy-agent/deployment-root/$DEPLOYMENT_ID/deployment-archive/script
 
 hooks:
   AfterInstall:
-    - location: scripts/restart_nginx.sh
+    - location: script/restart_nginx.sh
       timeout: 300
       runas: root
