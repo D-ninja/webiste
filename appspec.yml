@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /scripts
+  - source: /script
     destination: /opt/codedeploy-agent/deployment-root/$DEPLOYMENT_ID/deployment-archive/scripts
 
 hooks:
